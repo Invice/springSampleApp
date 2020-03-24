@@ -19,4 +19,4 @@ START "springPetclinic" /B java -javaagent:%KIEKER_JAR% -Dkieker.monitoring.skip
 
 PAUSE
 
-REM java -javaagent:"..\kieker-1.14-SNAPSHOT-aspectj.jar" -Dkieker.monitoring.skipDefaultAOPConfiguration=true -Dkieker.monitoring.configuration=".\META-INF\kieker.monitoring.properties" -Dorg.aspectj.weaver.loadtime.configuration=".\META-INF\aop.springPetclinic.xml" -cp ".:BOOT-INF/classes/:BOOT-INF/lib/*" "org.springframework.samples.petclinic.PetClinicApplication"
+REM java -javaagent:"kieker-1.14-SNAPSHOT-aspectj.jar" -Dkieker.monitoring.skipDefaultAOPConfiguration=true -Dkieker.monitoring.configuration=".\META-INF\kieker.monitoring.properties" -Dorg.aspectj.weaver.loadtime.configuration=".\META-INF\aop.springPetclinic.xml" -cp ".:BOOT-INF/classes/:BOOT-INF/lib/*" "org.springframework.samples.petclinic.PetClinicApplication"
