@@ -17,6 +17,6 @@ SET JAVA_CP=".;BOOT-INF\classes\;BOOT-INF\lib\*"
 
 START "springPetclinic" /B java -javaagent:%KIEKER_JAR% -Dkieker.monitoring.skipDefaultAOPConfiguration=true -Dkieker.monitoring.configuration=%KIEKER_CONFIG% -Dorg.aspectj.weaver.loadtime.configuration=%AOP_CONFIG% -cp %JAVA_CP% %MAINCLASS%
 
-PAUSE
+CALL .\create-load.bat
 
 REM java -javaagent:"kieker-1.14-SNAPSHOT-aspectj.jar" -Dkieker.monitoring.skipDefaultAOPConfiguration=true -Dkieker.monitoring.configuration=".\META-INF\kieker.monitoring.properties" -Dorg.aspectj.weaver.loadtime.configuration=".\META-INF\aop.springPetclinic.xml" -cp ".:BOOT-INF/classes/:BOOT-INF/lib/*" "org.springframework.samples.petclinic.PetClinicApplication"
