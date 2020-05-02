@@ -6,7 +6,7 @@
 :: Init
 SET URL=http://localhost:8075
 SET BINDIR=%~dp0
-SET LOGDIR=%BINDIR%log
+SET LOGDIR=%BINDIR%\log
 cd %BINDIR%
 
 :: Create log directory if it does not already exist.
@@ -21,7 +21,7 @@ CALL :post_and_save_url "%URL%/owners/new" "firstName=Harry&lastName=Potter&addr
 
 SET /p HP_URL=<%LOGDIR%\hp-url.txt 
 
-:loop
+
 CALL :get_url "%URL%/"
 CALL :get_url "%URL%/owners?lastName="
 CALL :post_url "%HP_URL%/pets/new" "id=&name=Hedwig&birthDate=2000-01-01&type=bird"
@@ -33,7 +33,6 @@ CALL :post_url "%URL%/owners/new" "firstName=Petunia&lastName=Dursley&address=4+
 CALL :get_url "%URL%/owners?lastName=Dumbledore"
 CALL :get_url "%URL%/vets.html"
 TIMEOUT /T 2 /nobreak > NUL
-GOTO loop
 
 :: Force execution to quit before reaching the functions
 EXIT /B %ERRORLEVEL%

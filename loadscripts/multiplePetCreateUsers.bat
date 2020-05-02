@@ -1,0 +1,20 @@
+@ECHO OFF
+
+SET COUNTER=0
+SET MAX=5
+SET BINDIR=%~dp0
+cd %BINDIR%
+
+IF NOT "%1"=="" SET COUNTER=%1
+IF NOT "%2"=="" SET /A MAX=COUNTER+%2
+
+ECHO %COUNTER%
+ECHO %MAX%
+
+:loop
+START /B %BINDIR%petCreateUser.bat %COUNTER%
+set /A COUNTER=COUNTER+1
+if %COUNTER%==%MAX% GOTO end
+GOTO loop
+
+:end

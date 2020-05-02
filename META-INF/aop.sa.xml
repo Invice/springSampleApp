@@ -13,9 +13,10 @@
 			Use * to consider all classes in all packages. In this case, you typically need some additional excludes. 
 		-->
 		<include within="org.springframework.samples.petclinic..*"/>
+		<!--
 		<include within="org.springframework.boot.webservices..*"/>
 		<include within="org.springframework.boot.web..*"/>
-
+		-->
 		<!--
 			Include/exclude examples for specific libraries:
 		-->
