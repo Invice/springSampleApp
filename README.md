@@ -5,5 +5,4 @@ Sample applciation for testing ExplorViz. Starts an instance of [Spring PetClini
 ## Running locally
 To start the application execute the run-monitotoring.bat file.
 
-
-The create-load script is adapted from [ExplorViz as a Service](https://github.com/Marco01809/EaaS-demo-application/blob/master/eaas-image/create-load.sh).
+Examples for load scripts adapted from [ExplorViz as a Service](https://github.com/Marco01809/EaaS-demo-application/blob/master/eaas-image/create-load.sh) can be found [here](https://github.com/Invice/SpringSampleApp/tree/master/loadscripts).
